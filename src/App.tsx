@@ -47,8 +47,10 @@ function App() {
   function onSubmit(e: FormEvent) {
     e.preventDefault();
     next();
-    if (isLastStep) next();
-    alert("Formulario entregue");
+    if (isLastStep) {
+      alert("Formulario entregue");
+    }
+    next();
   }
   return (
     <div

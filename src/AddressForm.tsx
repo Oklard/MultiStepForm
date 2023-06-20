@@ -1,13 +1,13 @@
 import { FormWarapper } from "./FormWrapper";
 
-type AddresData = {
+type AddressData = {
   street: string;
   city: string;
   state: string;
   zip: string;
 };
-type AddresFormProps = AddresData & {
-  updateFields: (fields: Partial<AddresData>) => void;
+type AddresFormProps = AddressData & {
+  updateFields: (fields: Partial<AddressData>) => void;
 };
 
 export function AddressForm({
@@ -18,7 +18,7 @@ export function AddressForm({
   updateFields,
 }: AddresFormProps) {
   return (
-    <FormWarapper title={"Addres"}>
+    <FormWarapper title={"Address"}>
       <label>Street</label>
       <input
         autoFocus
