@@ -50,7 +50,6 @@ function App() {
     if (isLastStep) {
       alert("Formulario entregue");
     }
-    next();
   }
   return (
     <div

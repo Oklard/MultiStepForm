@@ -20,8 +20,11 @@ export function AccountForm({
         autoFocus
         required
         type="email"
-        value={email}
-        onChange={(e) => updateFields({ email: e.target.value })}
+        value={localStorage.getItem("email") ?? email}
+        onChange={(e) => {
+          localStorage.setItem("email", e.target.value);
+          updateFields({ email: e.target.value });
+        }}
       />
 
       <label htmlFor="">Password</label>
